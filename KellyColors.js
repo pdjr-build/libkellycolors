@@ -39,6 +39,12 @@ module.exports = class KellyColors {
       '#E25822',
       '#2B3D26'
     ];
+    this.start = this.COLORS[0];
+  }
+ 
+  reset() {
+    while (this.COLORS[0] != this.start) this.getColor();
+    return(this);
   }
 
   getColor() {
